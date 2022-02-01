@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" >
+        <title>Science Quiz</title>
+  <style>* {
+    font-family: monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    user-select: none;
+}
+body {  margin: 0;
+background-color: lightgoldenrodyellow; }
+#root {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.task {
+    width: 300px;
+    max-width: 90%;
+    background: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    animation: test2 800ms;
+    font-size: 20px;
+}
+.task_question {
+    margin-top: 40px;
+}
+.task_answers {
+    margin-top: 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+}
+.task_btn {
+    background: lightsalmon;
+    font-size: 20px;
+}
+.task_btn:active {
+    background: #d8d8d8;
+}
+.task_submit {
+    margin-top: 40px;
+    display: inline-block;
+    width: 100%;
+    background: #00c800;
+    color: white;
+    font-size: 20px;
+}
+.task_submit:hover {
+    background: #00a000;
+}
+.task button {
+    border: none;
+    padding: 10px;
+    transition: 100ms background;
+    box-shadow: 1px 1px 4px 1px #b8b8b8;
+    outline: none;
+}
+.task_btn_selected {
+    background: #d8d8d8 !important;
+}
+@keyframes test {
+    to {
+        transform: translate(100vw, 0);
+    }
+}
+.task_result {
+    font-size: 40px;
+    animation: test3 2000ms;
+    color: red;
+}
+.task_result_correct {
+    color: #00c800 !important;
+}
+@keyframes test2 {
+    from {
+        transform: translate(-100vw, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+@keyframes test3 {
+    from {
+        transform: translate(-100vw, 0);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    60% {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(100vw, 0);
+    }
+}
+.score {
+    font-size: 50px;
+}
+.title {
+    font-size: 50px;
+}
+.start {
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 25px;
+    background-color: orange;
+    border-radius: 5px;
+    border-color: orangered;
+} 
+.start:hover{
+    background-color: rgb(183, 236, 76);
+    border-color:olivedrab;
+}
+.homebtn{
+    background-color: aquamarine;
+    font-size: 50px;
+    position: absolute;
+    top: 90%;
+    border-radius: 25px;
+}
+</style>
+</head>
+<body>
+    <button class="homebtn"> <a href="index.html">Home</a></button>
+    <div id="root"></div>
+    <footer style="position:absolute;bottom:0;right:0;padding:6px;">&copy; Vanya 2020</footer>
+    <script src="physics.js"></script>
+</body>
+</html>
